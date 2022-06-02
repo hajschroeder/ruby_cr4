@@ -3,7 +3,7 @@
 <h3><%= @product.country_of_origin %></h3>
 
 <% if @product.reviews.any? %>
-  <h4>Here is what people have to say about this:</h4>
+  <h4>Here are the people who have reviewed this item:</h4>
 
   <% @product.reviews.each do |review| %>
     <ul>
