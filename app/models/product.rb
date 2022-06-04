@@ -7,8 +7,10 @@ class Product < ApplicationRecord
   
   before_save(:titleize_product)
   
-  scope :usa, -> { where(country_of_origin: "USA") }
+  scope :three_most_recent, -> { order(created_at: :desc).limit(3) }
   
+  scope :usa, -> { where(country_of_origin: "United States of America") }
+
   scope :most_reviewed, -> {(
     select("products.id, products.name, count(reviews.id) as reviews_count")
     .joins(:reviews)
