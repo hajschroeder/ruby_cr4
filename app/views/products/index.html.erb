@@ -10,11 +10,11 @@
 
 <% if @products.any? %> 
 <h4>What is new at Mario?</h4>
-<ul>
+<ol>
   <% @products.three_most_recent.each do |product| %>
     <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
-  </ul>
+  </ol>
 
 <h4>USA! USA! USA! See what fine american products we have</h4>
 <ul>
