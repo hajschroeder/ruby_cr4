@@ -1,6 +1,36 @@
-<h1>Products</h1>
+<h1>WELCOME TO MARIO</h1>
+<p>Hey hey hey, We are Mario and We are here to sell you food!</p>
+
+
+<p>We are a family who have been serving this community since like three weeks ago. A long history of standing with the local community</p>
+
+<p>At Mario, we believe in three things. Healthy food, healthy community, healthy communication, and that the moon is fake</p>
+
+<p>Wait..whoops, that was four things. We at Mario believe in four things</p>
 
 <% if @products.any? %> 
+<h4>What is new at Mario?</h4>
+<ul>
+  <% @products.three_most_recent.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+  </ul>
+
+<h4>USA! USA! USA! See what fine american products we have</h4>
+<ul>
+  <% @products.usa.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+  </ul>
+
+  <h4>See our most reviewed item!</h4>
+  <ul>
+    <% @products.most_reviewed.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+    
+<h1>Products</h1>
 <ul> 
   <% @products.each do |product| %>
     <li><%= link_to product.name, product_path(product) %>
