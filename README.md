@@ -36,10 +36,14 @@ _Note, this will require your local device to have Ruby installed_
 * Open the folder saved to your desktop with VSCode (or any other IDE capable of running Ruby scripts)
 * Bundle the gems by typing `gem bundle install`. 
 * With two bash terminals open, run `postgres` in one, and `rails s` in the other. This will start the server.
-* In the browser navigate to 'localhost:3000' 
 * Open a new bash terminal and enter `rake db:create`
 * Run `rake db:migrate`
-* Run `rake db:seed`. This may provide an error. If this is the case, refer to the work-around in the Known Bugs seciton below. 
+* Run `rake db:seed`. 
+* In the browser navigate to 'localhost:3000'
+* This should take the user to the home page. Click a product to view it  
+* Click "edit product" to either make changes or to delete the product.  
+* Click a reviewer's name to view their review. 
+* Click "edit" to make changes to their review, or to delete the review. 
 ___
 
 ## Known Bugs
