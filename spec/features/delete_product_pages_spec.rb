@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 describe "the delete a product process" do 
+  before(:each) do 
+    user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd', :admin => true)
+    login_as(user, :scope => :user)
+  end
+  
   it "deletes a proudct" do
     product = Product.create(:name => 'Lobster Tails', :cost => '37', :country_of_origin => 'United States of America')
     visit product_path(product)
