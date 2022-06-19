@@ -6,8 +6,8 @@ describe "the add a product process" do
     login_as(user, :scope => :user)
   end
   it "adds a new product" do
-    user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd', :admin => true)
-    login_as(user, :scope => :user)
+
+    
     visit products_path
     click_link 'Add a new Product'
     fill_in 'Name', :with => 'Lasagna'
