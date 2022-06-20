@@ -40,8 +40,13 @@ _Note, this will require your local device to have Ruby installed as well as Pos
 * Run `rake db:migrate`
 * Run `rake db:seed`
 * Run `rails s` to start the rails server. 
-* In the browser navigate to 'localhost:3000'
-* This should take the user to the home page. Click a product to view it  
+* In the browser navigate to 'localhost:3000', which will take the user to the home page.
+* Create an account by clicking the 'sign up' link and follow the instructions on the sign up page. 
+### How to gain admin privileges
+* Any typical user can view all products, read reviews, and write reviews. However, you will need admin privileges to add, edit, or delete products. You must also be an admin to delete and edit reviews.
+* To make yourself an admin, open the rails console by running `rails c` in the terminal. 
+* In the console run `user = User.first`, which will show your log in info, including a boolean that will say `admin: false`
+* Run `user.admin = true` and then `user.save`. This will grant you admin privileges.
 * Click "edit product" to either make changes or to delete the product.  
 * Click a reviewer's name to view their review. 
 * Click "edit" to make changes to their review, or to delete the review. 
