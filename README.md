@@ -28,15 +28,15 @@
 
 ## Description
 
-This is an independant project for the coding school Epicodus. It's an application for a faux local business that allows a user to post reviews of various products. The purpose is to demonstrate the author's understanding of the Rails framework using Active Record, as well as the author's understanding of simple database structures and one-to-many relationships. 
+This is an application for a faux local business that allows a user to post reviews of various products. The purpose is to demonstrate the author's understanding of the Rails framework using Active Record, as well as the author's understanding of simple database structures and one-to-many relationships. 
 
 ## Setup/Installation
 _Note, this will require your local device to have Ruby installed as well as PostgreSQL_
 * Clone this repository to your desktop
 * Open the folder saved to your desktop with VSCode (or any other IDE capable of running Ruby scripts)
-* Bundle the gems by typing `gem bundle install`. 
-* Open a bash terminal and run `postgres`
-* Open a new bash terminal and enter `rake db:create`
+* Bundle the gems by typing `bundle install`. 
+* Open a terminal and run `postgres`
+* Open a new terminal and enter `rake db:create`
 * Run `rake db:migrate`
 * Run `rake db:seed`
 * Run `rails s` to start the rails server. 
