@@ -37,6 +37,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'jquery-rails'
 
+gem 'react-rails'
+
+
 gem 'faker'
 
 gem 'bootstrap-sass', '~> 3.4.1'
@@ -69,3 +72,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "webpacker", "~> 5.4"

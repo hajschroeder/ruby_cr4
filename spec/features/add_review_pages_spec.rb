@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the add a review process" do 
   before(:each) do 
-    user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd', :admin => true)
+    user = User.create!(:email => "test@example.com", :password => 'f4k3p455w0rd', :admin => true)
     login_as(user, :scope => :user)
   end
   
